@@ -16,9 +16,15 @@ export default function NotesClientPage() {
   }, [])
 
   return (
-    <div>
-      <h1>Notes (Client-side)</h1>
-      <pre>{JSON.stringify(notes, null, 2)}</pre>
+    <div className="max-w-4xl mx-auto py-8 px-4">
+      <h1 className="text-3xl font-bold mb-6 text-foreground">
+        Notes (Client-side)
+      </h1>
+      <div className="bg-card border rounded-lg shadow-sm">
+        <pre className="p-6 overflow-auto text-sm text-card-foreground">
+          {JSON.stringify(notes, null, 2)}
+        </pre>
+      </div>
     </div>
   )
 } 
